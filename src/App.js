@@ -14,6 +14,7 @@ import {
 } from 'chart.js';
 import {Bar} from 'react-chartjs-2';
 import {faker} from '@faker-js/faker';
+import {useState} from "react";
 
 
 ChartJS.register(
@@ -79,14 +80,16 @@ const data = {
 
 
 function App() {
+
+    const [open, setOpen] = useState(true);
+    console.log(open);
     return (
         <div className="w-full flex">
-            <aside className="w-[300px] min-h-screen bg-[#FBFAFF] border border-[#E9E9EF] p-4">
+
+            <aside
+                className={'w-64 md:w-[300px] transition ease-in-out delay-150 min-h-screen bg-[#FBFAFF] border border-[#E9E9EF] p-4 transition ease-out duration-100 ' + (open ? 'block' : 'hidden')}>
                 <div className="w-full flex justify-between items-center">
                     <img src={logo} alt="Logo"/>
-                    <a href="">
-                        <img src={hamburgerMenu} alt="Logo"/>
-                    </a>
                 </div>
                 <div className="uppercase text-sm text-gray-700 my-5">Menu</div>
                 <ul className="flex flex-col space-y-3 text-sm">
@@ -146,6 +149,9 @@ function App() {
                 <div>
                     <header
                         className="w-full bg-white h-10 flex justify-between items-center pl-7 h-16 border-b border-[#E9E9EF]">
+                        <button type='button' onClick={() => setOpen(!open)} className="mr-2 cursor-pointer">
+                            <img src={hamburgerMenu} alt="Logo"/>
+                        </button>
                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd"
                                   d="M11.431 10.723L16.604 15.896L15.897 16.604L10.724 11.431C9.587 12.406 8.112 13 6.5 13C2.916 13 0 10.084 0 6.5C-0.000998892 4.764 0.675001 3.131 1.902 1.903C3.131 0.676 4.764 0 6.5 0C10.084 0 13 2.916 13 6.5C13 8.112 12.406 9.586 11.431 10.723ZM1 6.5C1 9.533 3.468 12 6.5 12C9.532 12 12 9.532 12 6.5C12 3.467 9.532 1 6.5 1C5.03 1 3.648 1.572 2.61 2.611C1.571 3.649 0.999001 5.03 1 6.5Z"
