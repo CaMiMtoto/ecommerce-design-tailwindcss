@@ -4,7 +4,7 @@ import dashboard from "../assets/icons/dashboard.svg";
 export default function Aside({isOpen}) {
     return (
         <aside
-            className={'w-64 md:w-[300px] transition ease-in-out delay-150 min-h-screen bg-[#FBFAFF] border border-[#E9E9EF] p-4 transition ease-out duration-100 ' + (isOpen ? 'block' : 'hidden')}>
+            className={'w-[300px] flex-0 transition ease-in-out delay-150 min-h-screen bg-[#FBFAFF] border border-[#E9E9EF] p-4 transition ease-out duration-100 ' + (isOpen ? 'block' : 'hidden')}>
             <div className="w-full flex justify-between items-center">
                 <img src={logo} alt="Logo"/>
             </div>

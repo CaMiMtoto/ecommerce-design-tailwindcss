@@ -40,7 +40,7 @@ const options = {
     },
 };
 
-const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov','Dec'];
+const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const data = {
     labels,
     datasets: [
@@ -70,7 +70,7 @@ function Dashboard() {
         <React.Fragment>
             <h4>Dashboard</h4>
             <div className="grid grid-cols-2 md:grid-cols-4 my-4 gap-4">
-                <div className="p-6 max-w-sm bg-white rounded-sm border border-gray-200 shadow-none">
+                <div className="p-6 max-w-sm bg-white rounded border border-gray-200 shadow-none">
                     <div className="flex justify-between">
                         <div
                             className="p-2 bg-[#E8E6F6] h-[50px] w-[50px] flex items-center justify-center rounded">
@@ -97,7 +97,7 @@ function Dashboard() {
                     </div>
                     <h1 className="text-4xl text-center mt-3">88%</h1>
                 </div>
-                <div className="p-6 max-w-sm bg-white rounded-sm border border-gray-200 shadow-none">
+                <div className="p-6 max-w-sm bg-white rounded border border-gray-200 shadow-none">
                     <div className="flex justify-between">
                         <div
                             className="p-2 bg-[#FFF7DF] h-[50px] w-[50px] flex items-center justify-center rounded">
@@ -125,7 +125,7 @@ function Dashboard() {
                     </div>
                     <h1 className="text-4xl text-center mt-3">$314k</h1>
                 </div>
-                <div className="p-6 max-w-sm bg-white rounded-sm border border-gray-200 shadow-none">
+                <div className="p-6 max-w-sm bg-white rounded border border-gray-200 shadow-none">
                     <div className="flex justify-between">
                         <div
                             className="p-2 bg-[#EAFBFE] h-[50px] w-[50px] flex items-center justify-center rounded">
@@ -153,7 +153,7 @@ function Dashboard() {
                     </div>
                     <h1 className="text-4xl text-center mt-3">$48k</h1>
                 </div>
-                <div className="p-6 max-w-sm bg-white rounded-sm border border-gray-200 shadow-none">
+                <div className="p-6 max-w-sm bg-white rounded border border-gray-200 shadow-none">
                     <div className="flex justify-between">
                         <div
                             className="p-2 bg-[#FFEBE8] h-[50px] w-[50px] flex items-center justify-center rounded">
@@ -185,61 +185,55 @@ function Dashboard() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-4">
-                <div className="md:col-span-2 min-h-96 border p-4">
+                <div className="md:col-span-2 min-h-96 border p-4 rounded">
                     <h4 className="uppercase text-gray-700 text-sm">STATISTICS</h4>
                     <div className='py-5'>
                         <Bar options={options} data={data}/>
                     </div>
                 </div>
-                <div className="md:col-span-1 min-h-96 border p-4 overflow-y-scroll">
-                    <div>
-                        <h4 className="uppercase text-gray-700 text-sm mb-4">RECENT ACTIVITY</h4>
-                        <div>
+                <div className="md:col-span-1 min-h-96 border p-6 rounded overflow-y-scroll">
+                    <h4 className="uppercase text-gray-700 text-sm mb-4">RECENT ACTIVITY</h4>
+
+
+                    <ol className="relative border-l border-l-2 border-gray-200">
+                        <li className="mb-5 ml-6">
+                            <span
+                                className="flex absolute -left-2 justify-center items-center w-4 h-4  bg-[#19B9D1] rounded-full "></span>
                             <h5 className="text-[#19B9D1] text-sm mb-2">You sold item</h5>
-                            <p className="text-sm mb-2">
-                                Curabitur non leo mauris. Quisque dapibus massa in nisi tincidunt, vitae
-                                lacinia
-                                ex vestibulum.
+                            <p className="text-base font-normal  text-sm mb-2">
+                                Curabitur non leo mauris. Quisque dapibus massa in nisi tincidunt, vitae lacinia ex vestibulum.
                             </p>
-                            <div className="text-xs text-gray-500">10 minutes ago</div>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 className="uppercase text-gray-700 text-sm mb-4">RECENT ACTIVITY</h4>
-                        <div>
+                            <h6 className="text-gray-400 text-xs">10 minutes ago</h6>
+                        </li>
+                        <li className="mb-5 ml-6">
+                            <span
+                                className="flex absolute -left-2 justify-center items-center w-4 h-4  bg-[#19B9D1] rounded-full "></span>
                             <h5 className="text-[#19B9D1] text-sm mb-2">You sold item</h5>
-                            <p className="text-sm mb-2">
-                                Curabitur non leo mauris. Quisque dapibus massa in nisi tincidunt, vitae
-                                lacinia
-                                ex vestibulum.
+                            <p className="text-base font-normal  text-sm mb-2">
+                                Curabitur non leo mauris. Quisque dapibus massa in nisi tincidunt, vitae lacinia ex vestibulum.
                             </p>
-                            <div className="text-xs text-gray-500">10 minutes ago</div>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 className="uppercase text-gray-700 text-sm mb-4">RECENT ACTIVITY</h4>
-                        <div>
+                            <h6 className="text-gray-400 text-xs">10 minutes ago</h6>
+                        </li>
+                        <li className="mb-5 ml-6">
+                            <span
+                                className="flex absolute -left-2 justify-center items-center w-4 h-4  bg-[#19B9D1] rounded-full "></span>
                             <h5 className="text-[#19B9D1] text-sm mb-2">You sold item</h5>
-                            <p className="text-sm mb-2">
-                                Curabitur non leo mauris. Quisque dapibus massa in nisi tincidunt, vitae
-                                lacinia
-                                ex vestibulum.
+                            <p className="text-base font-normal  text-sm mb-2">
+                                Curabitur non leo mauris. Quisque dapibus massa in nisi tincidunt, vitae lacinia ex vestibulum.
                             </p>
-                            <div className="text-xs text-gray-500">10 minutes ago</div>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 className="uppercase text-gray-700 text-sm mb-4">RECENT ACTIVITY</h4>
-                        <div>
+                            <h6 className="text-gray-400 text-xs">10 minutes ago</h6>
+                        </li>
+                        <li className="mb-5 ml-6">
+                            <span
+                                className="flex absolute -left-2 justify-center items-center w-4 h-4  bg-[#19B9D1] rounded-full "></span>
                             <h5 className="text-[#19B9D1] text-sm mb-2">You sold item</h5>
-                            <p className="text-sm mb-2">
-                                Curabitur non leo mauris. Quisque dapibus massa in nisi tincidunt, vitae
-                                lacinia
-                                ex vestibulum.
+                            <p className="text-base font-normal  text-sm mb-2">
+                                Curabitur non leo mauris. Quisque dapibus massa in nisi tincidunt, vitae lacinia ex vestibulum.
                             </p>
-                            <div className="text-xs text-gray-500">10 minutes ago</div>
-                        </div>
-                    </div>
+                            <h6 className="text-gray-400 text-xs">10 minutes ago</h6>
+                        </li>
+                    </ol>
+
                 </div>
 
             </div>

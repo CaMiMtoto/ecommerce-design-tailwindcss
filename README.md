@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Ecommerce Dashboard Design
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was build using react js and Tailwind css , you can find the  [Figma Design](https://www.figma.com/file/jnPoIBGnWtBgedgmoPS2r1/ecommerce-dashboard?node-id=0%3A1) there.
 
 ## Available Scripts
 
